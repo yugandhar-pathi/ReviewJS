@@ -14,7 +14,7 @@ export let findMax = (testArr) => { // [2,3,4]
     return maxNum;
 }
 
-export let findCommonEle = (firstArr, secondArr) => {
+export let removeDuplicateNumbers = (firstArr, secondArr) => {
     if (!Array.isArray(firstArr) || !Array.isArray(secondArr)) {
         return "Arguments should be arrays"
     }

@@ -1,4 +1,4 @@
-import { findMax, findCommonEle, findCommonElem, mostRepNum } from './learnArrays'
+import { findMax, removeDuplicateNumbers, findCommonElem, mostRepNum } from './learnArrays'
 
 test("find maximum number in array", () => {
     expect(findMax([2, 3, 4])).toBe(4)
@@ -7,8 +7,8 @@ test("find maximum number in array", () => {
 })
 
 test("find unique elements from two different arrays", () => {
-    expect(findCommonEle([1, 2, 3], [3, 4, 5])).toEqual([1, 2, 3, 4, 5])
-    expect(findCommonEle(1)).toBe("Arguments should be arrays")
+    expect(removeDuplicateNumbers([1, 2, 3], [3, 4, 5])).toEqual([1, 2, 3, 4, 5])
+    expect(removeDuplicateNumbers(1)).toBe("Arguments should be arrays")
 })
 
 test("find common elements", () => {
