@@ -30,6 +30,28 @@ export let findCommonEle = (firstArr, secondArr) => {
 
 export let findCommonElem = (arrOne, arrTwo) => arrOne.filter(ele => arrTwo.indexOf(ele) != -1)
 
+// Finding most repated number in the array
+
+export let mostRepNum = arr => {
+    let testObj = {}
+    let maxRepNum;
+    let maxRepCount = Number.NEGATIVE_INFINITY;
+    arr.forEach(ele => {
+        testObj[ele] ? testObj[ele] += 1 : testObj[ele] = 1
+    })
+    for (let num in testObj) {
+        if (testObj[num] > maxRepCount) {
+            maxRepNum = [num]
+            maxRepCount = testObj[num]
+        } else if (testObj[num] == maxRepCount) {
+            maxRepNum.push(num)
+        }
+    }
+    return maxRepNum
+}
+
+
+
 
 
 
