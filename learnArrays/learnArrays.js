@@ -72,6 +72,9 @@ export const greaterThanTwo = (arrOne, arrTwo) => {
 //Add two to all numbers in the array using map
 export const addNum = arr => arr.map((num) => num + 2)
 
+//reduce method
+export const addAll = arr => arr.reduce((tot, num) => tot += num)
+
 
 
 
