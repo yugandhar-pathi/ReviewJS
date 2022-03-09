@@ -1,4 +1,4 @@
-import { findMax, removeDuplicateNumbers, findCommonElem, mostRepNum, greaterThanTwo } from './learnArrays'
+import { findMax, removeDuplicateNumbers, findCommonElem, mostRepNum, greaterThanTwo, addNum } from './learnArrays'
 
 test("find maximum number in array", () => {
     expect(findMax([2, 3, 4])).toBe(4)
@@ -24,4 +24,8 @@ test("find the greater than 3 numbers in an array", () => {
     expect(greaterThanTwo([1, 2, 3], [4, 5, 6, 1, 2])).toEqual([4, 5, 6])
     expect(greaterThanTwo(1, 2, 3)).toBe("input should be arrays")
     expect(greaterThanTwo([], [])).toBe("Arrays should not be empty")
+})
+
+test("add 2 to all numbers in the array", () => {
+    expect(addNum([1, 2, 3])).toEqual([3, 4, 5])
 })

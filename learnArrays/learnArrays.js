@@ -69,6 +69,8 @@ export const greaterThanTwo = (arrOne, arrTwo) => {
     return finRes
 }
 
+//Add two to all numbers in the array using map
+export const addNum = arr => arr.map((num) => num + 2)
 
 
 
