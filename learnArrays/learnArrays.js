@@ -1,7 +1,7 @@
 // function to find maximum number in the array
 // Args : array of numbers
 
-export let findMax = (testArr) => { // [2,3,4]
+export const findMax = (testArr) => { // [2,3,4]
     if (!Array.isArray(testArr)) {
         return "Please Pass Array"
     }
@@ -14,7 +14,7 @@ export let findMax = (testArr) => { // [2,3,4]
     return maxNum;
 }
 
-export let removeDuplicateNumbers = (firstArr, secondArr) => {
+export const removeDuplicateNumbers = (firstArr, secondArr) => {
     if (!Array.isArray(firstArr) || !Array.isArray(secondArr)) {
         return "Arguments should be arrays"
     }
@@ -28,11 +28,11 @@ export let removeDuplicateNumbers = (firstArr, secondArr) => {
     return newArr;
 }
 
-export let findCommonElem = (arrOne, arrTwo) => arrOne.filter(ele => arrTwo.indexOf(ele) != -1)
+export const findCommonElem = (arrOne, arrTwo) => arrOne.filter(ele => arrTwo.indexOf(ele) != -1)
 
 // Finding most repated number in the array
 
-export let mostRepNum = arr => {
+export const mostRepNum = arr => {
     let testObj = {}
     let maxRepNum;
     let maxRepCount = Number.NEGATIVE_INFINITY;
