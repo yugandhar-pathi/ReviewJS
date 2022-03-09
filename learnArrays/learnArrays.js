@@ -18,7 +18,7 @@ export const removeDuplicateNumbers = (firstArr, secondArr) => {
     if (!Array.isArray(firstArr) || !Array.isArray(secondArr)) {
         return "Arguments should be arrays"
     }
-    let combinedArr = [...firstArr, ...secondArr]
+    const combinedArr = [...firstArr, ...secondArr]
     let newArr = []
     combinedArr.forEach(ele => {
         if (newArr.indexOf(ele) == -1) {
@@ -39,7 +39,7 @@ export const mostRepNum = arr => {
     arr.forEach(ele => {
         testObj[ele] ? testObj[ele] += 1 : testObj[ele] = 1
     })
-    console.log(testObj)
+
     for (let num in testObj) {
         if (testObj[num] > mostRepCount) {
             mostRepCount = testObj[num]
@@ -60,12 +60,14 @@ export const greaterThanTwo = (arrOne, arrTwo) => {
     if (arrOne.length == 0 || arrTwo.length == 0) {
         return "Arrays should not be empty"
     }
-    let combinedArray = [...arrOne, ...arrTwo]
+    const combinedArray = [...arrOne, ...arrTwo]
     let combUniqArr = []
     combinedArray.forEach(ele => {
-        (combUniqArr.indexOf(ele) == -1) ? combUniqArr.push(ele) : ""
+        if (combUniqArr.indexOf(ele) == -1) {
+            combUniqArr.push(ele)
+        }
     })
-    let finRes = combUniqArr.filter(ele => ele > 3)
+    const finRes = combUniqArr.filter(ele => ele > 2)
     return finRes
 }
 
