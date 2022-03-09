@@ -32,25 +32,60 @@ export const findCommonElem = (arrOne, arrTwo) => arrOne.filter(ele => arrTwo.in
 
 // Finding most repated number in the array
 
-export const mostRepNum = arr => {
+// export const mostRepNum = arr => {
+//     let testObj = {}
+//     let maxRepNum;
+//     let maxRepCount = Number.NEGATIVE_INFINITY;
+//     arr.forEach(ele => {
+//         testObj[ele] ? testObj[ele] += 1 : testObj[ele] = 1
+//     })
+//     for (let num in testObj) {
+//         if (testObj[num] > maxRepCount) {
+//             maxRepNum = [num]
+//             maxRepCount = testObj[num]
+//         } else if (testObj[num] == maxRepCount) {
+//             maxRepNum.push(num)
+//         }
+//     }
+//     return maxRepNum
+// }
+
+export const mostRepNum = arr => {//[1,1,2,2,3]
     let testObj = {}
-    let maxRepNum;
-    let maxRepCount = Number.NEGATIVE_INFINITY;
+    let mostRepNum;
+    let mostRepCount = Number.NEGATIVE_INFINITY;
     arr.forEach(ele => {
         testObj[ele] ? testObj[ele] += 1 : testObj[ele] = 1
     })
+    console.log(testObj)
     for (let num in testObj) {
-        if (testObj[num] > maxRepCount) {
-            maxRepNum = [num]
-            maxRepCount = testObj[num]
-        } else if (testObj[num] == maxRepCount) {
-            maxRepNum.push(num)
+        if (testObj[num] > mostRepCount) {
+            mostRepCount = testObj[num]
+            mostRepNum = [num]
+        } else if (testObj[num] == mostRepCount) {
+            mostRepNum.push(num)
         }
     }
-    return maxRepNum
+    return mostRepNum
 }
 
+// Find numbers greater 2 in the given 2 arrays(no duplicates) using filter
 
+export const greaterThanTwo = (arrOne, arrTwo) => {
+    if (!Array.isArray(arrOne) || !Array.isArray(arrTwo)) {
+        return "input should be arrays"
+    }
+    if (arrOne.length == 0 || arrTwo.length == 0) {
+        return "Arrays should not be empty"
+    }
+    let combinedArray = [...arrOne, ...arrTwo]
+    let combUniqArr = []
+    combinedArray.forEach(ele => {
+        (combUniqArr.indexOf(ele) == -1) ? combUniqArr.push(ele) : ""
+    })
+    let finRes = combUniqArr.filter(ele => ele > 3)
+    return finRes
+}
 
 
 
