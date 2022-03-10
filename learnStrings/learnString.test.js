@@ -1,14 +1,14 @@
-import { findMostRepChar, checkPalindrome, removeLastPath } from './learnString'
+import { findMostRepChar, isPalindrome, removeLastPath } from './learnString'
 
 test("find most repeated char in the array", () => {
-    expect(findMostRepChar("abb")).toEqual(["b"])
-    expect(findMostRepChar("abbcc")).toEqual(["b", "c"])
+    expect(findMostRepChar("abb")).toEqual(expect.arrayContaining(["b"]))
+    expect(findMostRepChar("abbcc")).toEqual(expect.arrayContaining(["b", "c"]))
 })
 
 test("check given string is palindrome or not", () => {
-    expect(checkPalindrome("madam")).toEqual("Given string is palindrome")
-    expect(checkPalindrome("apple")).toEqual("Given string is not palindrome")
-    expect(checkPalindrome("")).toEqual("Empty string")
+    expect(isPalindrome("madam")).toEqual("Given string is palindrome")
+    expect(isPalindrome("apple")).toEqual("Given string is not palindrome")
+    expect(isPalindrome("")).toEqual("Empty string")
 })
 
 test("remove last path from the given url", () => {

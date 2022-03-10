@@ -18,8 +18,8 @@ export const findMostRepChar = str => {
 }
 // check weather a string is palindrome or not
 
-export const checkPalindrome = str => {
-    let revStr = str.split("").reverse().join("")
+export const isPalindrome = str => {
+    const revStr = str.split("").reverse().join("")
     if (str.length == 0) {
         return "Empty string"
     }
