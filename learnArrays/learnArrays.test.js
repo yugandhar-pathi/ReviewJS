@@ -1,4 +1,7 @@
-import { findMax, removeDuplicateNumbers, findCommonElem, mostRepNum, greaterThanTwo, addNum, addAll } from './learnArrays'
+import {
+    findMax, removeDuplicateNumbers, findCommonElem,
+    mostRepNum, greaterThanTwo, addNum, addAll, findMaxAndMin, isSubset, findSecHigNum
+} from './learnArrays'
 
 test("find maximum number in array", () => {
     expect(findMax([2, 3, 4])).toBe(4)
@@ -30,6 +33,21 @@ test("add 2 to all numbers in the array", () => {
     expect(addNum([1, 2, 3])).toEqual([3, 4, 5])
 })
 
+test("Find max and min numbers in the array", () => {
+    expect(findMaxAndMin([1, 2, 3, 4, 5, 6])).toEqual(expect.arrayContaining([1, 6]))
+})
+
+
 test("add all numbers in the array", () => {
     expect(addAll([1, 2, 3, 4])).toEqual(10)
+})
+
+test("is subset", () => {
+    expect(isSubset([1, 2, 3], [2, 3])).toBe(true);
+    expect(isSubset([1, 2, 3], [4, 5, 6])).toBe(false);
+})
+
+test("Find second highest number in the array", () => {
+    expect(findSecHigNum([1, 2, -100, 100, 0, 90])).toEqual(90)
+    expect(findSecHigNum([-1, -2, -100])).toEqual(-2)
 })
