@@ -90,7 +90,10 @@ export const findMaxAndMin = arr => {
             minNum = num
         }
     })
-    const finRes = [maxNum, minNum]
+    const finRes = {
+        max: maxNum,
+        min: minNum
+    }
     return finRes;
 }
 

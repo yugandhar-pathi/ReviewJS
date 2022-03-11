@@ -34,7 +34,7 @@ test("add 2 to all numbers in the array", () => {
 })
 
 test("Find max and min numbers in the array", () => {
-    expect(findMaxAndMin([1, 2, 3, 4, 5, 6])).toEqual(expect.arrayContaining([1, 6]))
+    expect(findMaxAndMin([1, 2, 3, 4, 5, 6])).toEqual({ "max": 6, "min": 1 })
 })
 
 
