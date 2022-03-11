@@ -24,15 +24,13 @@ export const isPalindrome = str => {
         return "Empty string"
     }
     if (str == revStr) {
-        return "Given string is palindrome"
+        return true
     } else {
-        return "Given string is not palindrome"
+        return false
     }
 }
 
 // remove last path from a given url
 
-export const removeLastPath = str => {
-    let res = str.slice(0, str.lastIndexOf("/"))
-    return res;
-}
+
+export const removeLastPath = str => str.slice(0, str.lastIndexOf("/")) 

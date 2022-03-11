@@ -6,8 +6,8 @@ test("find most repeated char in the array", () => {
 })
 
 test("check given string is palindrome or not", () => {
-    expect(isPalindrome("madam")).toEqual("Given string is palindrome")
-    expect(isPalindrome("apple")).toEqual("Given string is not palindrome")
+    expect(isPalindrome("madam")).toBeTruthy()
+    expect(isPalindrome("apple")).toBeFalsy()
     expect(isPalindrome("")).toEqual("Empty string")
 })
 
