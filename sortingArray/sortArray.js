@@ -1,4 +1,4 @@
-export const sortArrays = arr => {
+export const sortArrays = (arr, str) => {
     let val;
     for (let i = 0; i < arr.length; i++) {
         for (let j = i + 1; j < arr.length; j++) {
@@ -9,5 +9,10 @@ export const sortArrays = arr => {
             }
         }
     }
-    return arr;
+    if (str == "dsc") {
+        return arr;
+    } else if (str == "asc") {
+        let ascOrder = arr.reverse()
+        return ascOrder;
+    }
 }
