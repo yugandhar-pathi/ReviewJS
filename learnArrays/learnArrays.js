@@ -77,6 +77,52 @@ export const addNum = arr => arr.map((num) => num + 2)
 //reduce method
 export const addAll = arr => arr.reduce((tot, num) => tot += num)
 
+// Find max and min numbers in the array
+
+export const findMaxAndMin = arr => {
+    let maxNum = Number.NEGATIVE_INFINITY;
+    let minNum = Number.POSITIVE_INFINITY;
+    arr.forEach(num => {
+        if (num > maxNum) {
+            maxNum = num
+        }
+        if (num < minNum) {
+            minNum = num
+        }
+    })
+    const finRes = {
+        max: maxNum,
+        min: minNum
+    }
+    return finRes;
+}
+
+// is subset
+
+export const isSubset = (arrOne, arrTwo) => {
+    for (let i = 0; i < arrTwo.length; i++) {
+        if (arrOne.indexOf(arrTwo[i]) == -1) {
+            return false
+        }
+        return true
+    }
+}
+
+// find second highest number in the array
+
+export const findSecHigNum = arr => {
+    let firHigNum = Number.NEGATIVE_INFINITY;
+    let secHigNum = Number.NEGATIVE_INFINITY;
+    arr.forEach(ele => {
+        if (ele > firHigNum) {
+            secHigNum = firHigNum;
+            firHigNum = ele;
+        } else if (ele > secHigNum) {
+            secHigNum = ele
+        }
+    })
+    return secHigNum;
+}
 
 
 
