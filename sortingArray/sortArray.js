@@ -16,3 +16,38 @@ export const sortArrays = (arr, str) => {
         return ascOrder;
     }
 }
+
+// Find max number in the nested array
+export const findMax = arr => {
+    let flattendArr = arr.flat(Infinity) //if we know how many levels we want to flat the array we can give number too. In this case it is 2. 
+    let maxNum = Number.NEGATIVE_INFINITY;
+    flattendArr.forEach(num => {
+        if (num > maxNum) {
+            maxNum = num;
+        }
+    });
+    return maxNum
+}
+
+//Find the longest word in the sentence
+export const findLongWord = str => {
+    const strArr = str.split(" ")
+    let wordLen = []
+    strArr.forEach(ele => {
+        wordLen.push(ele.length)
+    })
+    let maxWordLength = Number.NEGATIVE_INFINITY;
+    wordLen.forEach(ele => {
+        if (ele > maxWordLength) {
+            maxWordLength = ele
+        }
+    })
+    let bigWord;
+    strArr.forEach(ele => {
+        if (ele.length == maxWordLength) {
+            bigWord = ele
+        }
+    })
+    return bigWord;
+
+}
