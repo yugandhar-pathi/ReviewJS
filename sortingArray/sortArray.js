@@ -32,22 +32,13 @@ export const findMax = arr => {
 //Find the longest word in the sentence
 export const findLongWord = str => {
     const strArr = str.split(" ")
-    let wordLen = []
-    strArr.forEach(ele => {
-        wordLen.push(ele.length)
-    })
-    let maxWordLength = Number.NEGATIVE_INFINITY;
-    wordLen.forEach(ele => {
-        if (ele > maxWordLength) {
-            maxWordLength = ele
-        }
-    })
+    let wordLen = Number.NEGATIVE_INFINITY;
     let bigWord;
     strArr.forEach(ele => {
-        if (ele.length == maxWordLength) {
-            bigWord = ele
+        if (ele.length > wordLen) {
+            wordLen = ele.length;
+            bigWord = ele;
         }
     })
     return bigWord;
-
 }
