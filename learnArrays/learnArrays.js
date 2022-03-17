@@ -80,3 +80,4 @@ export const addAll = arr => arr.reduce((tot, num) => tot += num)
 
 
 
+
