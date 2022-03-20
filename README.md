@@ -27,57 +27,25 @@
   - Function Rest parameters - test(...a)
   - Spread Operator
   - destructuring assignment
+  - Async and Awaite
 - Unit testing using Jest
-
-#### `HTML`
-
-- Basci HTMl Tags - input, button, p, a, li, ul, ol, form, table, img
-- Handle user events with Javascript
-  - button event
-  - input events
-- Window Object
-  - Document
-  - Console
-  - Location
-  - Navigator
-  - Screen
-- DOM Manipulation
-  - add/insert/update/remove elements
-- fetch API
-- Mock Server - JSON server, mirage.
-
-#### `CSS`
-
-- width & height
-- border
-- position
-- flex box
-  - flex-direction
-  - flex-wrap
-  - flex-flow
-  - justify-content
-  - align-items
-  - align-content
-- padding
-- margin
-- text-align
-
-#### `React`
-
-- Props
-- Components
-  - Class
-  - Functional
-- state management
-  - context
-  - redux
-- hooks
-- react-router
-- Testing components
+  - Runnig all tests/specific tests.
+  - Test Functions.
+  - Test Class.
+  - Test Async functions.
+  - Snapshot testing.
+  - Code coverage.
 
 #### Application Infrastructure
 
 - GitHub
+  - Clone : `git clone repo_url`
+  - new branch : `git checkout -b "branch_name"`
+  - Check branch: `git branch`
+  - Stage changes : `git add .`
+  - Commit changes : `git commit -m "commit message"`
+  - Push changes : `git push`
+  - Push branch to repo : `git push -u origin "branch_name"`
 - i18n
 - storybook
 - Cypress
