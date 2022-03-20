@@ -4,42 +4,36 @@ class Person {
     }
 }
 
-class Children extends Person {
+export class Children extends Person {
     constructor(speed) {
         super()
         this.speed = speed;
     }
     eatSpeedChildren() {
         console.log(super.eat())
-        console.log(this.speed)
+        return this.speed
     }
 }
 
-class Adult extends Person {
+export class Adult extends Person {
     constructor(speed) {
         super()
         this.speed = speed;
     }
     eatSpeedAdult() {
         console.log(super.eat())
-        console.log(this.speed)
+        return this.speed
     }
 }
 
-class Old extends Person {
+export class Old extends Person {
     constructor(speed) {
         super()
         this.speed = speed;
     }
     eatSpeedOld() {
         console.log(super.eat())
-        console.log(this.speed)
+        return this.speed
     }
 }
 
-let children = new Children("eats slowly")
-let adults = new Adult("eats very fast")
-let old = new Old("eats fast")
-children.eatSpeedChildren()
-adults.eatSpeedAdult()
-old.eatSpeedOld()
